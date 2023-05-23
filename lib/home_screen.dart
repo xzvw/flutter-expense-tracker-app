@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_expense_tracker_app/expense_list.dart';
 import 'package:flutter_expense_tracker_app/models/expense.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -37,9 +38,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(context) {
     return Scaffold(
       body: Column(
-        children: const [
-          Text('(placeholder) Chart'),
-          Text('(placeholder) List'),
+        children: [
+          const Text('(placeholder) Chart'),
+          ExpenseList(expenseList: dummyExpenseList),
         ],
       ),
     );
